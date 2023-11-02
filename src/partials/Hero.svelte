@@ -1,0 +1,75 @@
+<div class="mx-auto max-w-screen-lg py-6">
+  <div
+    class="flex flex-col items-center md:flex-row md:justify-between md:gap-x-24"
+  >
+    <div>
+      <h1 class="text-3xl">
+        Hi there, I'm <span
+          class="font-bold bg-gradient-to-br bg-clip-text text-green-800"
+          >Anurag</span
+        >
+        👋
+      </h1>
+      <p class="mt-6 text-xl leading-9">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus<!-- -->
+        <a class="hover:underline text-green-800" href="/">malesuada</a>
+        <!-- -->nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit
+        amet,<!-- -->
+        <a class=" hover:underline text-green-800" href="/">consectetur</a>
+        <!-- -->adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore.
+      </p>
+      <div class="mt-3 flex gap-1">
+        <a href="/"
+          ><img
+            class="h-12 w-12 hover:translate-y-1"
+            src="/assets/images/twitter-icon.png"
+            alt="Twitter icon"
+            loading="lazy"
+          /></a
+        ><a href="/"
+          ><img
+            class="h-12 w-12 hover:translate-y-1"
+            src="/assets/images/facebook-icon.png"
+            alt="Facebook icon"
+            loading="lazy"
+          /></a
+        ><a href="/"
+          ><img
+            class="h-12 w-12 hover:translate-y-1"
+            src="/assets/images/linkedin-icon.png"
+            alt="Linkedin icon"
+            loading="lazy"
+          /></a
+        ><a href="/"
+          ><img
+            class="h-12 w-12 hover:translate-y-1"
+            src="/assets/images/youtube-icon.png"
+            alt="Youtube icon"
+            loading="lazy"
+          /></a
+        >
+      </div>
+    </div>
+    <div class="hero_image">
+      <img
+        class="w-[250px] max-w-[unset] border-20 hover:scale-105"
+        src="/assets/images/pp2.png"
+        alt=""
+        loading="lazy"
+        draggable="false"
+      />
+    </div>
+  </div>
+</div>
+
+<style>
+  .hero_image {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+  }
+
+  .hero_image img {
+    border-radius: 10px;
+  }
+</style>
