@@ -1,0 +1,84 @@
+<div>
+  <div
+    class="flex flex-col gap-y-3 sm:flex-row sm:items-center sm:justify-between"
+  >
+    <a href="/">
+      <div
+        class="hero_title flex items-center bg-gradient-to-br bg-clip-text stroke-green-800 text-xl font-bold text-green-800"
+      >
+        <svg
+          width="40px"
+          height="40px"
+          viewBox="0 0 24 24"
+          fill="none"
+          class="mr-2"
+          xmlns="http://www.w3.org/2000/svg"
+          ><g id="SVGRepo_bgCarrier" stroke-width="0" /><g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          /><g id="SVGRepo_iconCarrier">
+            <path
+              d="M5.0333 14.8284L6.44751 16.2426L10.6902 12L6.44751 7.75733L5.0333 9.17155L7.86172 12L5.0333 14.8284Z"
+              fill="#38774b"
+            /> <path d="M15 14H11V16H15V14Z" fill="#38774b" />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M2 2C0.895431 2 0 2.89543 0 4V20C0 21.1046 0.89543 22 2 22H22C23.1046 22 24 21.1046 24 20V4C24 2.89543 23.1046 2 22 2H2ZM22 4H2L2 20H22V4Z"
+              fill="#38774b"
+            />
+          </g></svg
+        >
+        <span>Anurag D.</span>
+      </div>
+    </a>
+    <nav>
+      <ul class="flex gap-x-3 font-medium">
+        <li class="hover:text-green-800 hover:font-bold">
+          <a href="/posts/" target="_self">Blogs</a>
+        </li>
+        <li class="hover:text-green-800 hover:font-bold">
+          <a href="https://github.com/anurag-dhamala" target="_blank">GitHub</a>
+        </li>
+        <li class="hover:text-green-800 hover:font-bold">
+          <a href="/" target="_self">About</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<style>
+  .hero_title {
+    width: fit-content;
+  }
+  .hero_title span {
+    overflow: hidden;
+    border-right: 0.15em solid;
+    white-space: nowrap;
+    margin: 0 auto;
+    padding-right: 2px;
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+    width: fit-content;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 70%;
+    }
+  }
+
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #38774b;
+    }
+  }
+</style>

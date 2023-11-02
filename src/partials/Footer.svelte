@@ -1,0 +1,15 @@
+<div class="mx-auto max-w-screen-lg py-6">
+  <div class="border-t border-gray-600 pt-5">
+    <div class="text-sm text-right">
+<!--      © Copyright &lt;!&ndash; &ndash;&gt;2023&lt;!&ndash; &ndash;&gt; by &lt;!&ndash; &ndash;&gt;Anurag Dhamala&lt;!&ndash; &ndash;&gt;.-->
+      Built by
+<!--        with ♥ by&lt;!&ndash; &ndash;&gt;-->
+      <a
+        class="text-green-800 hover:underline"
+        href="https://creativedesignsguru.com"
+        target="_blank"
+        rel="noopener noreferrer">Anurag Dhamala</a
+      >.
+    </div>
+  </div>
+</div>
