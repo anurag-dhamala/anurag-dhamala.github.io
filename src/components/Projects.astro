@@ -12,13 +12,13 @@ import { projects } from "@/utils/static-data";
         >
       </div>
       <div class="text-sm">
-        <a href="/demo/astro-boilerplate/posts">View all projects →</a>
+        <a href="/blogs">View all projects →</a>
       </div>
     </div>
   </div>
   <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
     {
-      projects.map((project) => {
+      projects.slice(0, 3).map((project) => {
         return (
           <IndividualProject
             title={project.title}

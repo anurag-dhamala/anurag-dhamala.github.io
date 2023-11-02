@@ -16,3 +16,10 @@ export const projects = [
         date: ""
     }
 ]
+
+export const profile = {
+    twitter: "https://twitter.com/theanurag_d",
+    stackoverflow: "https://stackoverflow.com/users/14917277/anurag-dhamala",
+    hashnode: "https://anurag-dhamala.hashnode.dev/",
+    linkedin: "https://linkedin.com/in/anurag-dhamala"
+}
