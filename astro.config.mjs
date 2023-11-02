@@ -1,10 +1,9 @@
-import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
-import robotsTxt from 'astro-robots-txt';
+import tailwind from '@astrojs/tailwind';
 import { astroImageTools } from 'astro-imagetools';
+import robotsTxt from 'astro-robots-txt';
+import { defineConfig } from 'astro/config';
 
-import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
 export default defineConfig({
@@ -20,5 +19,5 @@ export default defineConfig({
       theme: 'monokai'
     }
   },
-  integrations: [tailwind({}), sitemap(), robotsTxt(), astroImageTools, svelte()]
+  integrations: [tailwind({}), sitemap(), robotsTxt(), astroImageTools]
 });

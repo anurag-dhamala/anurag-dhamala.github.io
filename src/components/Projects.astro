@@ -1,6 +1,7 @@
-<script>
-  import IndividualProject from "@/partials/IndividualProject.svelte";
-</script>
+---
+import IndividualProject from "@/components/IndividualProject.astro";
+import { projects } from "@/utils/static-data";
+---
 
 <div class="mx-auto max-w-screen-lg py-6">
   <div class="mb-6 text-2xl font-bold">
@@ -16,8 +17,16 @@
     </div>
   </div>
   <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-    <IndividualProject />
-    <IndividualProject />
-    <IndividualProject />
+    {
+      projects.map((project) => {
+        return (
+          <IndividualProject
+            title={project.title}
+            date={project.date}
+            description={project.description}
+          />
+        );
+      })
+    }
   </div>
 </div>

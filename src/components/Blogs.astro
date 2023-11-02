@@ -1,0 +1,32 @@
+---
+import IndividualProject from "@/components/IndividualProject.astro";
+import { projects } from "@/utils/static-data";
+---
+
+<div class="mx-auto max-w-screen-lg py-6">
+  <div class="mb-6 text-2xl font-bold">
+    <div class="flex items-baseline justify-between">
+      <div>
+        Recent <span class="bg-gradient-to-br bg-clip-text text-green-800"
+          >Blogs</span
+        >
+      </div>
+      <div class="text-sm">
+        <a href="/demo/astro-boilerplate/posts">View all blogs →</a>
+      </div>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+    {
+      projects.map((project) => {
+        return (
+          <IndividualProject
+            title={project.title}
+            date={project.date}
+            description={project.description}
+          />
+        );
+      })
+    }
+  </div>
+</div>
