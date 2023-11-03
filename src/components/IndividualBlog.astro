@@ -22,7 +22,7 @@ const { post } = Astro.props as Props;
     <div class="px-3 pt-4 pb-6 text-center min-h-[150px]">
       <h2 class="text-xl font-semibold">{post.frontmatter.title}</h2>
       <div class="mt-1 text-xs text-gray-400"></div>
-      <div class="mt-2 text-sm">
+      <div class="mt-2 text-sm line-clamp-2">
         {post.frontmatter.seoDescription}
       </div>
     </div>
