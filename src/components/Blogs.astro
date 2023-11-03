@@ -1,6 +1,6 @@
 ---
-import IndividualProject from "@/components/IndividualProject.astro";
-import { projects } from "@/utils/static-data";
+import IndividualBlog from "@/components/IndividualBlog.astro";
+const posts = await Astro.glob('../blogs/*.md');
 ---
 
 <div class="mx-auto max-w-screen-lg py-6">
@@ -18,14 +18,10 @@ import { projects } from "@/utils/static-data";
   </div>
   <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
     {
-      projects.map((project) => {
+      posts.map((post) => {
         return (
-          <IndividualProject
-            title={project.title}
-            date={project.date}
-            description={project.description}
-          />
-        );
+            <IndividualBlog post={post}/>
+        )
       })
     }
   </div>
