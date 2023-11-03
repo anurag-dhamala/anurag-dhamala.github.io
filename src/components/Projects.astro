@@ -12,11 +12,13 @@ import { projects } from "@/utils/static-data";
         >
       </div>
       <div class="text-sm">
-        <a href="/blogs">View all projects →</a>
+        <a href="https://github.com/anurag-dhamala" target="_blank"
+          >View all projects →</a
+        >
       </div>
     </div>
   </div>
-  <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+  <!-- <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
     {
       projects.slice(0, 3).map((project) => {
         return (
@@ -28,5 +30,20 @@ import { projects } from "@/utils/static-data";
         );
       })
     }
+  </div> -->
+  <div class="flex flex-col gap-8">
+    <section class="flex flex-col gap-4">
+      {
+        projects.slice(0, 4).map((project) => {
+          return (
+            <IndividualProject
+              title={project.title}
+              description={project.description}
+              link={project.link}
+            />
+          );
+        })
+      }
+    </section>
   </div>
 </div>

@@ -2,30 +2,41 @@
 interface Props {
   title: string;
   description: string;
-  date: string;
+  link: string;
 }
 
-const { title, description, date } = Astro.props as Props;
+const { title, description, link } = Astro.props as Props;
 ---
 
-<a class="hover:translate-y-1" href="/demo/astro-boilerplate/posts/fifth-post">
-  <div class="overflow-hidden rounded-md individualTitle">
-    <div class="aspect-w-3 aspect-h-2">
-      <img
-        class="h-full w-full object-cover object-center"
-        src="/demo/astro-boilerplate/assets/images/image-post2.jpeg"
-        alt="Image post 2"
-        loading="lazy"
-      />
-    </div>
-    <div class="px-3 pt-4 pb-6 text-center">
-      <h2 class="text-xl font-semibold">{title}</h2>
-      <div class="mt-1 text-xs text-gray-400">{date}</div>
-      <div class="mt-2 text-sm">
-        {description}
-      </div>
-    </div>
+<a
+  class="group flex w-full cursor-pointer flex-col justify-between gap-2 rounded-md border border-neutral-700 p-4 transition-all duration-300 hover:-translate-y-2 hover:border-neutral-400 md:flex-row md:items-center"
+  href={link}
+  target="_blank"
+  rel="noreferrer"
+>
+  <div class="flex flex-col gap-4 md:flex-row md:items-center">
+    <p class="text-green-800 font-bold">{title}</p>
+    <p>{description}</p>
   </div>
+
+  <svg
+    width="18"
+    height="18"
+    viewBox="0 0 18 18"
+    fill="none"
+    class="transition-all duration-300 group-hover:translate-x-1"
+  >
+    <path
+      d="M5.25 12.75L12.75 5.25"
+      stroke="#999999"
+      stroke-linecap="round"
+      stroke-linejoin="round"></path>
+    <path
+      d="M5.25 5.25H12.75V12.75"
+      stroke="#999999"
+      stroke-linecap="round"
+      stroke-linejoin="round"></path>
+  </svg>
 </a>
 
 <style>

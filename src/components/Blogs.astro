@@ -1,6 +1,6 @@
 ---
 import IndividualBlog from "@/components/IndividualBlog.astro";
-const posts = await Astro.glob('../blogs/*.md');
+const posts = await Astro.glob("../blogs/*.md");
 ---
 
 <div class="mx-auto max-w-screen-lg py-6">
@@ -12,16 +12,16 @@ const posts = await Astro.glob('../blogs/*.md');
         >
       </div>
       <div class="text-sm">
-        <a href="/demo/astro-boilerplate/posts">View all blogs →</a>
+        <a href="https://anurag-dhamala.hashnode.dev/" target="_blank"
+          >View all blogs →</a
+        >
       </div>
     </div>
   </div>
   <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
     {
       posts.map((post) => {
-        return (
-            <IndividualBlog post={post}/>
-        )
+        return <IndividualBlog post={post} />;
       })
     }
   </div>
