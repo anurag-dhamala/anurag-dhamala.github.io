@@ -1,0 +1,29 @@
+---
+import IndividualBlog from "@/components/IndividualBlog.astro";
+import {AppConfig} from "../../utils/AppConfig";
+import Base from "../../templates/Base.astro";
+const posts = await Astro.glob("../../blogs/*.md");
+
+const { title } = AppConfig;
+const { description } = AppConfig;
+---
+<Base head={{title, description}}>
+    <div class="mx-auto max-w-screen-lg py-6">
+        <div class="mb-6 mt-6 text-2xl font-bold">
+            <div class="flex items-baseline justify-between">
+                <div>
+                    Recent <span class="bg-gradient-to-br bg-clip-text text-green-800"
+                >Blogs</span
+                >
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+            {
+                posts.map((post) => {
+                    return <IndividualBlog post={post} />;
+                })
+            }
+        </div>
+    </div>
+</Base>
