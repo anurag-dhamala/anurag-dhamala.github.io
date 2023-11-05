@@ -12,7 +12,7 @@ const posts = await Astro.glob("../blogs/*.md");
         >
       </div>
       <div class="text-sm">
-        <a href="https://anurag-dhamala.hashnode.dev/" target="_blank"
+        <a href="/blog"
           >View all blogs →</a
         >
       </div>
@@ -20,7 +20,7 @@ const posts = await Astro.glob("../blogs/*.md");
   </div>
   <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
     {
-      posts.map((post) => {
+      posts.sort(()=>0.5-Math.random()).slice(0,3).map((post) => {
         return <IndividualBlog post={post} />;
       })
     }
