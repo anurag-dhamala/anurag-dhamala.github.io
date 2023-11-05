@@ -1,0 +1,36 @@
+---
+import {AppConfig} from "../../utils/AppConfig";
+import Base from "../../templates/Base.astro";
+
+const posts = await Astro.glob("../../blogs/*.md");
+export async function getStaticPaths() {
+    const posts = await Astro.glob("../../blogs/*.md");
+   return posts.map((post)=> (
+       {
+           params :{
+               slug: post.frontmatter.slug,
+           },
+           props: {
+               post
+           }
+       }
+   ))
+}
+
+const {slug} = Astro.params;
+
+const post = posts.filter(post => post.frontmatter.slug === slug);
+
+const { Content }= Astro.props.post;
+
+const title = AppConfig.title;
+const description = AppConfig.description;
+---
+
+<Base head={{title, description}}>
+    <div class="mt-6">
+        <p class="font-bold text-xl mb-6">{post[0].frontmatter.title}</p>
+    </div>
+    <Content/>
+
+</Base>
