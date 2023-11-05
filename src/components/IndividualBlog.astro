@@ -7,7 +7,7 @@ interface Props {
 const { post } = Astro.props as Props;
 ---
 
-<a class="hover:translate-y-1" href="#">
+<a class="hover:translate-y-1" href={`/blog/${post.frontmatter.slug}`}>
   <div class="overflow-hidden rounded-md individualTitle">
     <div class="aspect-w-3 aspect-h-2">
       <img
