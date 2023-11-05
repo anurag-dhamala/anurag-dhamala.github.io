@@ -1,11 +1,12 @@
 ---
 import {AppConfig} from "../../utils/AppConfig";
 import Base from "../../templates/Base.astro";
+import {MarkdownInstance} from "astro";
 
-const posts = await Astro.glob("../../blogs/*.md");
-export async function getStaticPaths() {
+const posts: (MarkdownInstance<Record<string, any>>) [] = await Astro.glob("../../blogs/*.md");
+export async function getStaticPaths(): Promise<any[]> {
     const posts = await Astro.glob("../../blogs/*.md");
-   return posts.map((post)=> (
+   return posts.map((post:  MarkdownInstance<Record<string, any>>): any=> (
        {
            params :{
                slug: post.frontmatter.slug,
@@ -19,7 +20,7 @@ export async function getStaticPaths() {
 
 const {slug} = Astro.params;
 
-const post = posts.filter(post => post.frontmatter.slug === slug);
+const post = posts.filter((post: MarkdownInstance<Record<string, any>>) => post.frontmatter.slug === slug);
 
 const { Content }= Astro.props.post;
 
