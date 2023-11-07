@@ -24,8 +24,8 @@ const post = posts.filter((post: MarkdownInstance<Record<string, any>>) => post.
 
 const { Content }= Astro.props.post;
 
-const title = AppConfig.title;
-const description = AppConfig.description;
+const title = post[0].frontmatter.title;
+const description = post[0].frontmatter.seoDescription;
 ---
 
 <Base head={{title, description}}>

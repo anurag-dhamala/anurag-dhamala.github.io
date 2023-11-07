@@ -4,8 +4,8 @@ import {AppConfig} from "../../utils/AppConfig";
 import Base from "../../templates/Base.astro";
 const posts = await Astro.glob("../../blogs/*.md");
 
-const { title } = AppConfig;
-const { description } = AppConfig;
+const title = "Anurag Dhamala | Blogs"
+const description = "Tech blogs by Anurag Dhamala"
 ---
 <Base head={{title, description}}>
     <div class="mx-auto max-w-screen-lg py-6">
