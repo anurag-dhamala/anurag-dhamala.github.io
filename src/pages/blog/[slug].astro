@@ -1,7 +1,7 @@
 ---
-import {AppConfig} from "../../utils/AppConfig";
-import Base from "../../templates/Base.astro";
+import Base from "@/templates/Base.astro";
 import {MarkdownInstance} from "astro";
+import {AppConfig} from "@/utils/AppConfig";
 
 const posts: (MarkdownInstance<Record<string, any>>) [] = await Astro.glob("../../blogs/*.md");
 export async function getStaticPaths(): Promise<any[]> {
@@ -24,8 +24,8 @@ const post = posts.filter((post: MarkdownInstance<Record<string, any>>) => post.
 
 const { Content }= Astro.props.post;
 
-const title = post[0].frontmatter.title;
-const description = post[0].frontmatter.seoDescription;
+const title = post?.[0]?.frontmatter?.title ?? AppConfig.title;
+const description = post?.[0]?.frontmatter?.seoDescription ?? AppConfig.description;
 ---
 
 <Base head={{title, description}}>
