@@ -1,5 +1,11 @@
 export const projects = [
     {
+        title: "sveltease",
+        description: "seamlessly integrate svelte components in any vite project",
+        date: "",
+        link: "https://github.com/anurag-dhamala/sveltease"
+    },
+    {
         title: "go-task-cli",
         description: "simple todo list cli in go",
         date: "",
@@ -16,13 +22,6 @@ export const projects = [
         description: "books reading platform for children all around Asia",
         date: "Jan, 2020",
         link: "https://letsreadasia.org"
-    },
-
-    {
-        title: "Hamro Chautari",
-        description: "Video calling platform using livekit",
-        date: "",
-        link: "https://chautari.hamropatro.com"
     }
 ]
 
