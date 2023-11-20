@@ -32,7 +32,7 @@
       </div>
     </a>
     <nav>
-      <ul class="flex gap-x-3 font-medium">
+      <ul class="flex gap-x-3 place-items-center font-medium">
         <li class="hover:text-green-800 hover:font-bold">
           <a href="/blog" target="_blank"
             >Blogs</a
@@ -41,8 +41,10 @@
         <li class="hover:text-green-800 hover:font-bold">
           <a href="https://github.com/anurag-dhamala" target="_blank">GitHub</a>
         </li>
-        <li class="hover:text-green-800 hover:font-bold">
-          <a href="/" target="_self">About</a>
+        <li class="hover:text-green-800">
+          <button id="pdf-downloader" onclick="" class="bg-green-800 hover:bg-green-700 text-white text-sm py-1 px-3 rounded-full">
+            <span>Download CV</span>
+          </button>
         </li>
       </ul>
     </nav>
@@ -84,3 +86,16 @@
     }
   }
 </style>
+
+
+<script>
+
+  const btn = document.getElementById("pdf-downloader");
+  if (btn) {
+      btn.addEventListener("click", (_) => {
+        window.open("/assets/pdfs/cv.pdf")
+      })
+  }
+
+
+</script>
