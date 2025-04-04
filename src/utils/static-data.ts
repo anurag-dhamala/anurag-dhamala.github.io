@@ -1,5 +1,11 @@
 export const projects = [
     {
+        title: "news-mcp-server",
+        description: "mcp server for fetching latest news based on country and language using newsdata.io",
+        date: "",
+        link: "https://github.com/anurag-dhamala/news-mcp-server"
+    },
+    {
         title: "sveltease",
         description: "seamlessly integrate svelte components in any vite project",
         date: "",
@@ -10,12 +16,6 @@ export const projects = [
         description: "simple todo list cli in go",
         date: "",
         link: "https://github.com/anurag-dhamala/go-task-cli"
-    },
-    {
-        title: "portfolio",
-        description: "simple portfolio built using Astro",
-        date: "",
-        link: "https://anurag-dhamala.github.io"
     },
     {
         title: "Let's Read Asia",

@@ -19,5 +19,5 @@ export default defineConfig({
       theme: 'monokai'
     }
   },
-  integrations: [tailwind({}), sitemap(), robotsTxt(), astroImageTools]
+  integrations: [tailwind(), sitemap(), robotsTxt(), astroImageTools]
 });

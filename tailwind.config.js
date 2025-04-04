@@ -1,5 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies, global-require */
-module.exports = {
+export default {
   content: [
     './src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}',
     './node_modules/astro-boilerplate-components/**/*.{js,ts,jsx,tsx}',
