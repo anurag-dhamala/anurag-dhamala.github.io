@@ -12,13 +12,13 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04 # ✅ Use stable image instead of ubuntu-24.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout your repository
         uses: actions/checkout@v4
 
-      - name: Preload required action (upload-artifact@v3)
-        uses: actions/upload-artifact@v3
+      - name: Preload required action (upload-artifact@v4)
+        uses: actions/upload-artifact@v4
 
       - name: Install, build, and upload your site
         uses: withastro/action@v1
@@ -30,7 +30,7 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: ubuntu-22.04 # ✅ Use same stable image here
+    runs-on: ubuntu-22.04
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
